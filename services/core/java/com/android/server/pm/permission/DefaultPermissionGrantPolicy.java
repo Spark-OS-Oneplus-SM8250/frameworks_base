@@ -940,6 +940,11 @@ final class DefaultPermissionGrantPolicy {
         // OnePlus Gallery
         grantSystemFixedPermissionsToSystemPackage(pm, "com.oneplus.gallery", userId,
                 STORAGE_PERMISSIONS);
+                
+        // Flipendo
+        grantSystemFixedPermissionsToSystemPackage(pm,
+                getDefaultProviderAuthorityPackage("com.google.android.flipendo", userId),
+                userId, SUSPEND_APP_PERMISSIONS);
     }
 
     private String getDefaultSystemHandlerActivityPackageForCategory(PackageManagerWrapper pm,
